@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "employees-time-manager-app"
+version = "1.0.0"
+description = ""
+authors = ["SzymonKwiecinski <kwiecinskji@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.2"
+pyside6 = "^6.7.0"
+sqlalchemy = "^2.0.29"
+
+
+[tool.poetry.group.dev.dependencies]
+black = {extras = ["d"], version = "^24.4.2"}
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+ignore_missing_imports = true
+warn_no_return = false
+
+[tool.black]
+line-length = 120
+target-version = ["py312"]
+
+[tool.isort]
+line_length = 120
+multi_line_output = 3
+include_trailing_comma = true
